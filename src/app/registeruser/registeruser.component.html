@@ -1,0 +1,47 @@
+<div class="container">
+    <h2>Add New User</h2>
+    <h4>{{successResponse}}</h4>
+    <form #adduserform="ngForm" (ngSubmit)="adduserform.form.valid && addAlienformsubmit()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.address" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="mobileNo">Mobile No.:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.mobileNo" name="mobileNo" required>
+        </div>
+        <div class="form-group">
+            <label for="emailId">E-mail:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.emailId" name="emailId" required>
+        </div>
+        <div class="form-group">
+            <label for="gift">Gift:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.gift" name="gift" required>
+        </div>
+        <div class="form-group">
+            <label for="giftLink1">Gift Link 1:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.giftLink1" name="giftLink1" required>
+        </div>
+        <div class="form-group">
+            <label for="giftLink2">Gift Link 2:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.giftLink2" name="giftLink2" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control"  [(ngModel)]="alien.description" name="description" required>
+        </div>     
+        <!-- <div class="form-group">
+            <label for="parent">Select Parent: </label>
+            <select [(ngModel)]="selectedLevel" (change)="selected()" name="parent" class="form-control">
+                <option *ngFor="let item of santaDropDown" [ngValue]="item.id" name="parent">{{item.name}}</option>
+            </select>
+            {{selectedLevel | json}}
+        </div>    -->
+        <button type="submit" class="btn btn-success" style="margin-top: 2%;">Submit</button>&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary" style="margin-top: 2%;" (click)="gotolist()">BACK</button>             
+    </form>
+</div>

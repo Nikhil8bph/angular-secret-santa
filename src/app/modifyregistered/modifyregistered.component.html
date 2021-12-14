@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>Add New User</h2>
+    <h4>{{successResponse}}</h4>
+    <form #adduserform="ngForm" (ngSubmit)="updateAlienformsubmit()">
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.aid" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea  type="text" class="form-control" required [(ngModel)]="alien.address" name="price" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="mobileNo">Mobile No.:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.mobileNo" name="mobileNo" required>
+        </div>
+        <div class="form-group">
+            <label for="emailId">E-mail:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.emailId" name="emailId" required>
+        </div>
+        <div class="form-group">
+            <label for="gift">Gift:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.gift" name="gift" required>
+        </div>
+        <div class="form-group">
+            <label for="giftLink1">Gift Link 1:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.giftLink1" name="giftLink1" required>
+        </div>
+        <div class="form-group">
+            <label for="giftLink2">Gift Link 2:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.giftLink2" name="giftLink2" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" required [(ngModel)]="alien.description" name="description" required>
+        </div>        
+        <button type="submit" class="btn btn-success" style="margin-top: 2%;">Update</button>&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary" style="margin-top: 2%;" (click)="gotolist()">BACK</button>             
+    </form>
+</div>

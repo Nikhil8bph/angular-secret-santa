@@ -1,0 +1,40 @@
+<div class="container">
+    <h3>All Registered Users</h3>      
+    <p>{{shuffleMessage}} </p>
+    <button type="button" class="btn btn-info" (click)="goToAddAlien()" style="margin-top: 1%;margin-bottom: 1%;">Add new user</button>&nbsp;
+    <button type="button" class="btn btn-info" (click)="goToShuffleAlien()" style="margin-top: 1%;margin-bottom: 1%;">Shuffle</button>&nbsp;
+    <button type="button" class="btn btn-info" (click)="goToEmailAlien()" style="margin-top: 1%;margin-bottom: 1%;">Send Mail</button>&nbsp;
+    <button type="button" class="btn btn-info" (click)="download()" style="margin-top: 1%;margin-bottom: 1%;">Download Table</button>&nbsp;
+    <table class="table table-striped">
+      <thead>      
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile No.</th>
+          <th>E-mail</th>
+          <th>Gift</th>
+          <th>Gift Link 1</th>
+          <th>Gift Link 2</th>
+          <th>Gift Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alien of _alienlist">
+            <td>{{alien.aid}}</td>
+            <td>{{alien.name}}</td>
+            <td>{{alien.address}}</td>
+            <td>{{alien.mobileNo}}</td>
+            <td>{{alien.emailId}}</td>
+            <td>{{alien.gift}}</td>
+            <td>{{alien.giftLink1}}</td>
+            <td>{{alien.giftLink2}}</td>
+            <td>{{alien.description}}</td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="goToEditAlien(alien.aid)">Edit</button>&nbsp;
+              <button type="button" class="btn btn-danger" (click)="goToDeleteAlien(alien.aid)">Delete</button>&nbsp;
+            </td>
+      </tbody>      
+    </table>
+  </div>
