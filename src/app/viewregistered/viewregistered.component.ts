@@ -37,7 +37,7 @@ export class ViewregisteredComponent implements OnInit {
     this._service.deleteAlienByIdFromRemote(id).subscribe(
       data=>{
         console.log(data)
-        this.shuffleMessage="Shuffled successfully";
+        this.shuffleMessage="Deleted successfully";
       },
       error=>console.log("unable to delete")
     )

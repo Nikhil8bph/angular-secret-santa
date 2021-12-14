@@ -19,11 +19,11 @@ export class NgserviceService {
   }
 
   fetchAlienByIdFromRemote(aid: Number):Observable<any>{
-    return this.http.get<any>("http://34.203.189.6:8080/users"+aid);
+    return this.http.get<any>("http://34.203.189.6:8080/users/"+aid);
   }
 
   deleteAlienByIdFromRemote(aid: Number):Observable<any>{
-    return this.http.delete<any>("http://34.203.189.6:8080/users"+aid);
+    return this.http.delete<any>("http://34.203.189.6:8080/users/"+aid);
   }
 
   shuffleAlienFromRemote():Observable<any>{
